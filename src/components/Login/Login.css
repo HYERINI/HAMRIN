@@ -46,6 +46,7 @@
     font-size: 18px;
     color: #c2c2c2;
     font-weight: 400;
+    cursor: pointer;
 }
 
 #loginBt{
@@ -58,6 +59,7 @@
     font-weight: 400;
     color: white;
     background-color: #e64841;
+    cursor: pointer;
 }
 
 #signupBt{
@@ -70,6 +72,11 @@
     font-weight: 400;
     color: white;
     background-color: #e64841;
+    cursor: pointer;
+}
+
+#loginBt:hover, #signupBt:hover{
+    opacity: 0.7;
 }
 
 #loginEmail {
