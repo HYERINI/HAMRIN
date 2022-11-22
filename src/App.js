@@ -1,24 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
+import Login from './components/Login/Login';
+import GeneralSignup from './components/Signup/GeneralSignup';
+import AdminSignup from './components/Signup/AdminSignup';
+import Join from './components/Join/Join';
+import SelectType from './components/SelectType/SelectType';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <Router>
+        <Routes>
+          <Route path="/join" element={<Join />} />
+          <Route path="/select" element={<SelectType />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/generalSignup" element={<GeneralSignup />} />
+          <Route path="/adminSignup" element={<AdminSignup />} />
+        </Routes>
+      </Router>
   );
 }
 

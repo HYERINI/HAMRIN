@@ -1,0 +1,89 @@
+.bodyWrap{
+    width: 100vw;
+    height: 100vh;
+}
+
+.loginForm{
+    display: flex;
+    flex-direction: column;
+    width: 40vw;
+    margin: 150px auto 0px auto;
+}
+
+#welcomeText{
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+#inputText{
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-top: 10px;
+}
+
+#loginEmail{
+    margin-top: 30px;
+    height: 40px;
+    border-radius: 20px;
+    border: 2px solid rgb(180, 180, 180);  
+}
+
+#loginPw{
+    
+    margin-top: 20px;
+    height: 40px;
+    border-radius: 20px;
+    border: 2px solid rgb(180, 180, 180);    
+}
+
+#loginSubText{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 10px;
+    font-size: 18px;
+    color: #c2c2c2;
+    font-weight: 400;
+}
+
+#loginBt{
+    width: 20vw;
+    height: 55px;
+    margin: 40px auto 0px auto;
+    border-radius: 30px;
+    border: 0;
+    font-size: 23px;
+    font-weight: 400;
+    color: white;
+    background-color: #e64841;
+}
+
+#signupBt{
+    width: 20vw;
+    height: 55px;
+    margin: 30px auto 0px auto;
+    border-radius: 30px;
+    border: 0;
+    font-size: 23px;
+    font-weight: 400;
+    color: white;
+    background-color: #e64841;
+}
+
+#loginEmail {
+    background-image: url('./../../img/user_email.png');
+    background-repeat: no-repeat;
+    padding-left: 40px;
+    box-sizing: border-box;
+    background-position: 2px center;
+}
+
+#loginPw {
+    background-image: url('./../../img/user_password.png');
+    background-repeat: no-repeat;
+    padding-left: 40px;
+    box-sizing: border-box;
+    background-position: 2px center;
+}
