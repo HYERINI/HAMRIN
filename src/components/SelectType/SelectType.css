@@ -34,7 +34,7 @@
     background-size: 50px;
     box-sizing: border-box;
     background-position: 35px center;
-    padding-left: 65px;
+    padding-left: 70px;
 }
 
 .operateBtn {
@@ -43,7 +43,7 @@
     background-size: 50px;
     box-sizing: border-box;
     background-position: 35px center;
-    padding-left: 65px;
+    padding-left: 70px;
 }
 
 .generalBtn:hover, .operateBtn:hover{
