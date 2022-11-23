@@ -2,6 +2,7 @@ import './Signup.css';
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import Title from './../Title/Title';
   
 function GeneralSignup(){
 
@@ -98,51 +99,54 @@ function GeneralSignup(){
         });
     }
     return (
-        <div className="generalUserForm">
-            <div id="name">
-                이름
-                <input type="text" name="name" value={name} onChange={onNameHandler} required></input>
+        <form className="SignUpForm">
+            <Title title="SIGN UP" />
+            <div className="inputForm">
+                <div id="name">
+                    <label for="name">이름</label>
+                    <input type="text" name="name" value={name} onChange={onNameHandler} required placeholder="실명을 입력하세요."></input>
+                </div>
+                <div id="username">
+                    <label for="email">이메일</label>
+                    <input type="email" name="userName" value={userName} onChange={onUserNameHandler} placeholder="abcdefg@gmail.com"></input>
+                </div>
+                <div id="password">
+                    <label for="password">비밀번호</label>
+                    <input type="password" name="password" value={password} onChange={onPasswordHandler} placeholder="**********"></input>
+                </div>
+                <div id="gender">
+                    <label for="gender">성별</label>
+                    <select value={gender} name="gender" onChange={onGenderHandler}>
+                        <option value="default">선택</option>
+                        <option value="WOMAN">여자</option>
+                        <option value="MAN">남자</option>
+                    </select>
+                </div>
+                <div id="phoneNumber">
+                    <label for="phoneNumber">전화번호</label>
+                    <input type="text" name="phoneNumber" value={phoneNumber} onChange={onPhoneNumberHandler} placeholder="'-' 구분없이 입력하세요."></input>
+                </div>
+                <div id="major">
+                    <label for="major">전공</label>
+                    <input type="text" name="major" value={major} onChange={onMajorHandler} placeholder="전공을 입력하세요."></input>
+                </div>
+                <div id="university">
+                    <label for="university">대학</label>
+                    <input type="text" name="university" value={university} onChange={onUniversityHandler} placeholder="대학교를 입력하세요."></input>
+                </div>
+                <div id="foreignerNumber">
+                    <label for="foreignerNumber">외국인등록번호</label>
+                    <input type="text" name="foreignerNumber" value={foreignerNumber} placeholder="000-0000" onChange={onForeignerNumberHandler}></input>
+                </div>
+                <div id="address">
+                    <label for="address">주소</label>
+                    <input type="text" name="address" value={address} onChange={onAddressHandler} placeholder="현지 주소를 입력하세요."></input>
+                </div>
+                <div className="signupBt">
+                    <button id="signupBt" type="button" onClick={onSubmitHandler}>회원가입하기</button>
+                </div>
             </div>
-            <div id="username">
-                이메일
-                <input type="email" name="userName" value={userName} onChange={onUserNameHandler}></input>
-            </div>
-            <div id="password">
-                비밀번호
-                <input type="password" name="password" value={password} onChange={onPasswordHandler}></input>
-            </div>
-            <div id="gender">
-                성별
-                <select value={gender} name="gender" onChange={onGenderHandler}>
-                    <option value="default">선택</option>
-                    <option value="WOMAN">여자</option>
-                    <option value="MAN">남자</option>
-                </select>
-            </div>
-            <div id="phoneNumber">
-                전화번호
-                <input type="text" name="phoneNumber" value={phoneNumber} onChange={onPhoneNumberHandler}></input>
-            </div>
-            <div id="major">
-                전공
-                <input type="text" name="major" value={major} onChange={onMajorHandler}></input>
-            </div>
-            <div id="university">
-                대학
-                <input type="text" name="university" value={university} onChange={onUniversityHandler}></input>
-            </div>
-            <div id="foreignerNumber">
-                외국인등록번호
-                <input type="text" name="foreignerNumber" value={foreignerNumber} onChange={onForeignerNumberHandler}></input>
-            </div>
-            <div id="address">
-                주소
-                <input type="text" name="address" value={address} onChange={onAddressHandler}></input>
-            </div>
-            <div id="signupBt">
-                <button type="button" onClick={onSubmitHandler}>회원가입하기</button>
-            </div>
-        </div>
+        </form>
     );
 }
 

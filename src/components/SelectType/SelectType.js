@@ -6,11 +6,11 @@ import Title from './../Title/Title';
 function SelectType(){
   const navigate = useNavigate();
  
-  const onMoveGeneral = (event) => {
+  const onMoveGeneral = (e) => {
     navigate('/generalSignup');
   }
 
-  const onMoveAdmin = (event) => {
+  const onMoveAdmin = (e) => {
     navigate('/adminSignup');
   }
 

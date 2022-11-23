@@ -3,6 +3,7 @@
     position: relative;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
     width: 90%;
     height: calc(10vh);
     margin: 50px auto 0 auto;
@@ -10,12 +11,11 @@
 
 .Title img{
     position: absolute;
-    left: 0%;
+    left: 20%;
+    cursor: pointer;
     width: 40px;
-    height: 40px;
 }
 
 .Title h2{
-    padding-top: 5px;
     font-size: 2.2rem;
 }

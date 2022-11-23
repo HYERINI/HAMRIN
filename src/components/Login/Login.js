@@ -51,7 +51,7 @@ function Login(){
         navigate('/forgot');
     }
 
-    const onMoveSignup = (event) =>{
+    const onMoveSignup = (e) => {
         navigate('/select');
     }
 

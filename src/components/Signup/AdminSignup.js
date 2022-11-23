@@ -1,6 +1,7 @@
 import './Signup.css';
 import React, { useState } from 'react';
 import axios from 'axios';
+import Title from './../Title/Title';
 
 function GeneralSignup(){
     const [name, setName] = useState("");
@@ -80,39 +81,42 @@ function GeneralSignup(){
         });
     }
     return (
-        <div className="generalUserForm">
-            <div id="name">
-                이름
-                <input type="text" name="name" value={name} onChange={onNameHandler} required></input>
+        <form className="SignUpForm">
+            <Title title="SIGN UP" />
+            <div className="inputForm">
+                <div id="name">
+                    <label for="name">이름</label>
+                    <input type="text" name="name" value={name} placeholder="실명을 입력하세요." onChange={onNameHandler} required></input>
+                </div>
+                <div id="username">
+                    <label for="email">이메일</label>
+                    <input type="email" name="userName" value={userName} placeholder="abcdefg@gmail.com" onChange={onUserNameHandler}></input>
+                </div>
+                <div id="password">
+                    <label for="password">비밀번호</label>
+                    <input type="password" name="password" value={password} placeholder="**********" onChange={onPasswordHandler}></input>
+                </div>
+                <div id="address">
+                    <label for="address">주소</label>
+                    <input type="text" name="address" value={address} placeholder="주소를 입력하세요." onChange={onAddressHandler}></input>
+                </div>
+                <div id="businessName">
+                    <label for="businessName">상호명</label>
+                    <input type="text" value={businessName} name="businessName" placeholder="상호명을 입력하세요." onChange={onBusinessNameHandler}></input>
+                </div>
+                <div id="businessRegisterNumber">
+                    <label for="businessRegisterNumber">사업자등록번호</label>
+                    <input type="text" value={businessRegisterNumber} name="businessRegisterNumber" placeholder="사업자등록번호를 입력하세요." onChange={onBusinessRegisterNumberHandler}></input>
+                </div>
+                <div id="businessType">
+                    <label for="businessType">사업자 종류</label>
+                    <input type="text" value={businessType} name="businessType" placeholder="사업자종류는 드롭다운으로 해야되는거 아님 ?" onChange={onBusinessTypeHandler}></input>
+                </div>
+                <div className="signupBt">
+                    <button id="signupBt" type="button" onClick={onSubmitHandler}>회원가입하기</button>
+                </div>
             </div>
-            <div id="username">
-                이메일
-                <input type="email" name="userName" value={userName} onChange={onUserNameHandler}></input>
-            </div>
-            <div id="password">
-                비밀번호
-                <input type="password" name="password" value={password} onChange={onPasswordHandler}></input>
-            </div>
-            <div id="address">
-                주소
-                <input type="text" name="address" value={address} onChange={onAddressHandler}></input>
-            </div>
-            <div id="businessName">
-                상호명
-                <input type="text" value={businessName} name="businessName" onChange={onBusinessNameHandler}></input>
-            </div>
-            <div id="businessRegisterNumber">
-                사업자등록번호
-                <input type="text" value={businessRegisterNumber} name="businessRegisterNumber" onChange={onBusinessRegisterNumberHandler}></input>
-            </div>
-            <div id="businessType">
-                사업자 종류
-                <input type="text" value={businessType} name="businessType" onChange={onBusinessTypeHandler}></input>
-            </div>
-            <div id="signupBt">
-                <button type="button" onClick={onSubmitHandler}>회원가입하기</button>
-            </div>
-        </div>
+        </form>
     );
 }
 

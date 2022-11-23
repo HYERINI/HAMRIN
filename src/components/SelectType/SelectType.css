@@ -8,6 +8,11 @@
 
 .SelectWrap{
     height: calc(70vh);
+    flex-direction: column;
+}
+
+.SelectBtn {
+    flex-direction: column;
 }
 
 .SelectTitle{
