@@ -28,6 +28,24 @@
     cursor: pointer;
 }
 
+.generalBtn {
+    background-image: url('./../../img/person.png');
+    background-repeat: no-repeat;
+    background-size: 40px;
+    box-sizing: border-box;
+    background-position: 35px center;
+    padding-left: 60px;
+}
+
+.operateBtn {
+    background-image: url('./../../img/operator.png');
+    background-repeat: no-repeat;
+    background-size: 40px;
+    box-sizing: border-box;
+    background-position: 35px center;
+    padding-left: 60px;
+}
+
 .generalBtn:hover, .operateBtn:hover{
     opacity: 0.7;
 }
