@@ -31,19 +31,19 @@
 .generalBtn {
     background-image: url('./../../img/person.png');
     background-repeat: no-repeat;
-    background-size: 40px;
+    background-size: 50px;
     box-sizing: border-box;
     background-position: 35px center;
-    padding-left: 60px;
+    padding-left: 65px;
 }
 
 .operateBtn {
     background-image: url('./../../img/operator.png');
     background-repeat: no-repeat;
-    background-size: 40px;
+    background-size: 50px;
     box-sizing: border-box;
     background-position: 35px center;
-    padding-left: 60px;
+    padding-left: 65px;
 }
 
 .generalBtn:hover, .operateBtn:hover{
