@@ -2,6 +2,9 @@ import './Login.css';
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import facebook from '../../img/facebookLogo.png';
+import kakao from '../../img/kakaoLogo.png';
+import google from '../../img/googleLogo.png';
 
 function Login(){
     const navigate = useNavigate();
@@ -31,14 +34,15 @@ function Login(){
                 "Content-Type": `application/json`,
             },
             data: {
-                "password": "test",
-                "username": "test3@test.com"
+                "password": Email,
+                "username": Password
             },
         })
         .then((res) => {
-            console.log(res);
+            alert('로그인에 성공하였습니다.');
         })
         .catch((error) => {
+            alert('로그인에 실패하였습니다.');
             console.log(error);
         });
     }
@@ -64,6 +68,11 @@ function Login(){
                 </div>
                 <button id="loginBt" type="button" onClick={onSubmitHandler}>Login</button>
                 <button id="signupBt" type="button" onClick={onMoveSignup}>Sign Up</button>
+                <div id="messengerBt">
+                    <img src={facebook} id="facebookLogo"></img>
+                    <img src={kakao} id="kakaoLogo"></img>
+                    <img src={google} id="googleLogo"></img>
+                </div>
             </div>
         </div>
     );
