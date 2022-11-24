@@ -5,12 +5,14 @@ import GeneralSignup from './components/Signup/GeneralSignup';
 import AdminSignup from './components/Signup/AdminSignup';
 import Join from './components/Join/Join';
 import SelectType from './components/SelectType/SelectType';
+import Main from './components/Main/Main';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
       <Router>
         <Routes>
+          <Route path="/" element={<Main />} />
           <Route path="/join" element={<Join />} />
           <Route path="/select" element={<SelectType />} />
           <Route path="/login" element={<Login />} />
