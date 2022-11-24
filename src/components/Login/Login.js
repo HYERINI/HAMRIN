@@ -40,6 +40,7 @@ function Login(){
         })
         .then((res) => {
             alert('로그인에 성공하였습니다.');
+            navigate('/');
         })
         .catch((error) => {
             alert('로그인에 실패하였습니다.');

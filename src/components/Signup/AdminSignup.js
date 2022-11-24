@@ -1,9 +1,11 @@
 import './Signup.css';
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import Title from './../Title/Title';
 
 function GeneralSignup(){
+    const navigate = useNavigate();
     const [name, setName] = useState("");
     const [address, setAddress] = useState("");
     // const [role, setRole] = useState("");
@@ -42,6 +44,7 @@ function GeneralSignup(){
     }
 
     const onSubmitHandler = (event) => {
+        
         // 버튼만 누르면 리로드 되는것을 막아줌
         event.preventDefault();
         const role = "OPERATION"; 
@@ -74,7 +77,8 @@ function GeneralSignup(){
             },
         })
         .then((res) => {
-            console.log(res);
+            alert('회원가입에 성공하였습니다.');
+            navigate('/login');
         })
         .catch((error) => {
             console.log(error);

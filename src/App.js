@@ -6,6 +6,7 @@ import AdminSignup from './components/Signup/AdminSignup';
 import Join from './components/Join/Join';
 import SelectType from './components/SelectType/SelectType';
 import Main from './components/Main/Main';
+import MyPage from './components/MyPage/MyPage';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
           <Route path="/generalSignup" element={<GeneralSignup />} />
           <Route path="/adminSignup" element={<AdminSignup />} />
           <Route path="/forgot" element={<Forgot />} />
+          <Route path="/mypage" element={<MyPage />} />
         </Routes>
       </Router>
   );
