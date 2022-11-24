@@ -143,7 +143,7 @@ function GeneralSignup(){
                     <input type="text" name="address" value={address} onChange={onAddressHandler} placeholder="현지 주소를 입력하세요."></input>
                 </div>
                 <div className="signupBt">
-                    <button id="signupBt" type="button" onClick={onSubmitHandler}>회원가입하기</button>
+                    <button id="signupBt" type="button" onClick={onSubmitHandler}>Sign Up</button>
                 </div>
             </div>
         </form>

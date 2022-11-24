@@ -14,7 +14,7 @@ label {
 
 input {
     border: none;
-    padding: 10px 0 5px 0;
+    padding: 10px 0 5px 5px;
     border-bottom: 1px solid #c2c2c2;
     margin: 5px 0 15px 0;
     width: 100%;
@@ -34,4 +34,9 @@ select {
 
 .signupBt {
     text-align: center;
+    margin-bottom: 50px;
+}
+
+#signupBt {
+    font-weight: 500;
 }

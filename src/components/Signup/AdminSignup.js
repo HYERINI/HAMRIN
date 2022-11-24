@@ -113,7 +113,7 @@ function GeneralSignup(){
                     <input type="text" value={businessType} name="businessType" placeholder="사업자종류는 드롭다운으로 해야되는거 아님 ?" onChange={onBusinessTypeHandler}></input>
                 </div>
                 <div className="signupBt">
-                    <button id="signupBt" type="button" onClick={onSubmitHandler}>회원가입하기</button>
+                    <button id="signupBt" type="button" onClick={onSubmitHandler}>Sign Up</button>
                 </div>
             </div>
         </form>

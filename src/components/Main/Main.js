@@ -1,9 +1,14 @@
 import './Main.css';
 import Title from '../Title/Title';
+import MenuBar from '../MenuBar/MenuBar';
 
 function Main(){
     return(
-        <Title title="메인페이지" />
+        <div>
+            <Title title="메인페이지" />
+            <MenuBar />
+        </div>
+        
     )
 }
 
