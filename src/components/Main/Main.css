@@ -1,0 +1,7 @@
+#mainImg{
+    width: 55%; 
+    margin: 0 auto; 
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+}

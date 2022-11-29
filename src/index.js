@@ -25,6 +25,20 @@ import Apply_service from "./pages/line2/Apply_service";
 import Mypage1 from "./pages/line2/Mypage1";
 import Mypage2 from "./pages/line2/Mypage2";
 import My_post_list from "./pages/line2/My_post_list";
+
+// login + signup + main
+import Login from './components/Login/Login';
+import Forgot from './components/Login/Forgot';
+import GeneralSignup from './components/Signup/GeneralSignup';
+import AdminSignup from './components/Signup/AdminSignup';
+import Join from './components/Join/Join';
+import SelectType from './components/SelectType/SelectType';
+import Main from './components/Main/Main';
+import MyPage from './components/MyPage/MyPage';
+import Ask from './components/Ask/Ask';
+import EditGeneralInfo from './components/EditInfo/EditGeneralInfo';
+import EditAdminInfo from './components/EditInfo/EditAdminInfo';
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <Router>
@@ -44,7 +58,8 @@ root.render(
       <Route path="/login5" element={<Login5 />}></Route>
       <Route path="/login6" element={<Login6 />}></Route>
       {/* line2 */}
-      <Route path="/" element={<Home />}></Route>
+      
+      {/* <Route path="/" element={<Home />}></Route> */}
       <Route path="/apply_service" element={<Apply_service />}></Route>
       <Route
         path="/apply_service_select_date"
@@ -54,6 +69,17 @@ root.render(
       <Route path="/mypage2" element={<Mypage2 />}></Route>
       <Route path="/my_post_list" element={<My_post_list />}></Route>
 
+      <Route path="/" element={<Login />} />
+      <Route path="/main" element={<Main />} />
+      <Route path="/join" element={<Join />} />
+      <Route path="/select" element={<SelectType />} />
+      <Route path="/generalSignup" element={<GeneralSignup />} />
+      <Route path="/adminSignup" element={<AdminSignup />} />
+      <Route path="/forgot" element={<Forgot />} />
+      <Route path="/mypage" element={<MyPage />} />
+      <Route path="/ask" element={<Ask />} />
+      <Route path="/editGeneral" element={<EditGeneralInfo />} />
+      <Route path="/editAdmin" element={<EditAdminInfo />} />
       {/* // <div>
   
   //   //<Modify_post />
