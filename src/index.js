@@ -38,6 +38,7 @@ import MyPage from './components/MyPage/MyPage';
 import Ask from './components/Ask/Ask';
 import EditGeneralInfo from './components/EditInfo/EditGeneralInfo';
 import EditAdminInfo from './components/EditInfo/EditAdminInfo';
+import WithDraw from './components/WithDraw/WithDraw';
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -80,6 +81,7 @@ root.render(
       <Route path="/ask" element={<Ask />} />
       <Route path="/editGeneral" element={<EditGeneralInfo />} />
       <Route path="/editAdmin" element={<EditAdminInfo />} />
+      <Route path="/withdraw" element={<WithDraw />} />
       {/* // <div>
   
   //   //<Modify_post />
