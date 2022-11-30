@@ -53,6 +53,7 @@ const MyPage = () => {
       alert('정보를 수정할 수 없는 사용자입니다.');
     }
   }
+  
 
   return (
     <div>

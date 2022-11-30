@@ -57,32 +57,7 @@ function EditGeneralInfo(){
         console.log('사업자등록번호', businessRegisterNumber);
         console.log('사업자종류', businessType);
         
-        axios({
-            method: "post",
-            url: "http://54.180.210.232/api/v1/signup",
-            headers: {
-                "Content-Type": `application/json`,
-            },
-            data: {
-                "address": {
-                  "details": address,
-                },
-                "name": name,
-                "password": password,
-                "role": role,
-                "username": userName,  
-                "businessName": businessName,
-                "businessRegisterNumber": businessRegisterNumber,
-                "businessType": businessType
-            },
-        })
-        .then((res) => {
-            alert('회원가입에 성공하였습니다.');
-            navigate('/login');
-        })
-        .catch((error) => {
-            console.log(error);
-        });
+        
     }
     return (
         <form className="SignUpForm">
@@ -98,7 +73,7 @@ function EditGeneralInfo(){
                 </div>
                 <div id="password">
                     <label for="password">비밀번호</label>
-                    <input type="password" name="password" value={password} placeholder="**********" onChange={onPasswordHandler}></input>
+                    <button type="button" id="editPw">비밀번호 변경하기</button>
                 </div>
                 <div id="address">
                     <label for="address">주소</label>
@@ -117,7 +92,7 @@ function EditGeneralInfo(){
                     <input type="text" value={businessType} name="businessType" placeholder="사업자종류는 드롭다운으로 해야되는거 아님 ?" onChange={onBusinessTypeHandler}></input>
                 </div>
                 <div className="signupBt">
-                    <button id="signupBt" type="button" onClick={onSubmitHandler}>Sign Up</button>
+                    <button id="signupBt" type="button" onClick={onSubmitHandler}>수정하기</button>
                 </div>
             </div>
         </form>
